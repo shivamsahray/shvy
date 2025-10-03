@@ -1,7 +1,7 @@
 import mongoose, { models } from "mongoose";
 import bcrypt from "bcryptjs";
 import { Schema } from "mongoose";
-import { unique } from "next/dist/build/utils";
+
 
 export interface IUser {
     email: string;
@@ -15,8 +15,8 @@ const userSchema = new Schema<IUser>(
     {
         email: {type: String, required: true, unique: true},
         password: {type: String, required: true},
-        createdAt: {type: Date, required: true},
-        updatedAt: {type: Date, required: true}
+        // createdAt: {type: Date, required: true},
+        // updatedAt: {type: Date, required: true}
     },{
         timestamps: true
 })
